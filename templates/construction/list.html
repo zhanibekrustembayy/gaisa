@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "constructions" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "constructions" %}</h3>
+</div>
+	{% load humanize %}
+
+{% if construction.count > 0 %}
+<div class="row">
+	<table id="myTable" style="width:100%">
+		<thead>
+			<tr>
+				<th></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in construction %}
+			<tr>
+				<td>
+					<div class="card">
+						<div class="card-header">
+							<h5>{{ n.title }}</h5>
+							<p>{{ n.address }}</p>								
+						</div>
+						<div class="card-body">					
+							<div class="row">
+								<p><strong>{% trans "customer" %}: </strong>{{ n.customer }}</p>
+								<p><strong>{% trans "price" %}: </strong>{{ n.price }}</p>																		
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p><strong>{% trans "completion" %}: </strong>{{ n.completion }}</p>						
+						</div>
+					</div>
+				</td>	
+			</tr>
+			{% endfor %}	
+		</tbody>
+	</table>	
+</div>
+{% endif %}
+{% endblock content %}
+

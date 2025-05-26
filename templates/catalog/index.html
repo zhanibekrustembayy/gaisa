@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "catalog" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "Coming" %}</h2>
+<h4>{{ coming.organization  }}</h4>
+<h4>{{ coming.datec| date:"d.m.Y"  }}</h4>
+<h4>{{ coming.numb  }}</h4>
+<h2>{% trans "catalog" %}</h2>
+<div class="row">
+	<a class="btn btn-outline-info" style="width:100px" href="{% url 'coming_index' %}">{% trans "Back" %}</a>  
+</div>  
+<br>
+{% if catalog.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "category" %}</th>
+				<th>{% trans "title" %}</th>
+				<th>{% trans "price" %}</th>
+				<th>{% trans "quantity" %}</th>
+				<th>{% trans "unit" %}</th>
+				<th><a href="{% url 'catalog_create' coming_id %}">{% trans "Add" %}</a></th>					
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in catalog %}
+			<tr>				
+				<td>
+					<p>{{ p.category }}</p>
+				</td>
+				<td>
+					<p>{{ p.title }}</p>
+				</td>				
+				<td>
+					<p>{{ p.price }}</p>
+				</td>
+				<td>
+					<p>{{ p.quantity }}</p>
+				</td>
+				<td>
+					<p>{{ p.unit }}</p>
+				</td>
+				<td>
+					<a href="{% url 'catalog_edit' p.id coming_id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'catalog_read' p.id coming_id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'catalog_delete' p.id coming_id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'catalog_create' coming_id %}">{% trans "Create" %}</a>
+{% endif %}
+{% endblock content %}
+

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "comings" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "comings" %}</h2>
+{% if coming.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "datec" %}</th>
+				<th>{% trans "numb" %}</th>
+				<th>{% trans "organization" %}</th>
+				<th>{% trans "catalogs" %}</th>				
+				<!--<th></th>-->
+				<th><a href="{% url 'coming_create'%}">{% trans "Add" %}</a></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in coming %}
+			<tr>
+				<td>
+					<p>{{ n.datec | date:"d.m.Y" }}</p>	
+				</td>
+				<td>
+					<p>{{ n.numb }}</p>	
+				</td>
+				<td>				
+					<p>{{ n.organization }}</p>	
+				</td>
+				<td>
+					<p><a href="{% url 'catalog_index' n.id%}">{% trans "catalogs" %}</a></p>	
+				</td>				
+				<td>
+					<a href="{% url 'coming_edit' n.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'coming_read' n.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'coming_delete' n.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'coming_create'%}">{% trans "Add" %}</a>
+{% endif %}
+{% endblock content %}

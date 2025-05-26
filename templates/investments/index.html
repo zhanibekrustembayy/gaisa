@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "investmentss" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "investmentss" %}</h2>
+{% if investments.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "datein" %}</th>
+				<th>{% trans "investments_construction" %}</th>
+				<th>{% trans "investments_investor" %}</th>
+				<th>{% trans "amount" %}</th>
+				<!--<th></th>-->
+				<th><a href="{% url 'investments_create'%}">{% trans "Add" %}</a></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in investments %}
+			<tr>
+				<td>
+					<p>{{ n.datein | date:"d.m.Y" }}</p>	
+				</td>
+				<td>				
+					<p>{{ n.construction }}</p>	
+				</td>
+				<td>
+					<p>{{ n.investor }}</p>	
+				</td>
+				<td>				
+					<p>{{ n.amount }}</p>	
+				</td>
+				<td>
+					<a href="{% url 'investments_edit' n.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'investments_read' n.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'investments_delete' n.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'investments_create'%}">{% trans "Add" %}</a>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Catalog details" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h5>{{ catalog.category }}</h5>
+			<h5>{{ catalog.title }}</h5>
+			<h6>{{ catalog.price }} 〒</h6>
+			{% if catalog.sale_quantity != None %}
+				<h6><strong>{% trans "Sale Quantity" %}</strong> {{ catalog.sale_quantity }}</h6>
+			{% endif %}					
+			{% if reviews.count > 0 %}
+				<h6>{% trans "Reviews" %} {{ reviews.count }} </h6>
+			{% endif %}	
+			{% if catalog.avg_rating != None %}
+				<p><div class="Stars" style='--rating: {{ catalog.avg_rating | stringformat:".1f" }};'></div></p>	
+				<h6><strong>{% trans "Avg Rating" %}</strong> {{ catalog.avg_rating | floatformat:1 }}</h6>
+			{% endif %}				
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-9">				
+					<table>
+						<tr>
+							<td><strong>{% trans "info" %}</strong>&nbsp:</td>
+							<td>{{ catalog.info }}</td>
+						</tr>
+						<tr>
+							<td><strong>{% trans "details" %}</strong>&nbsp:</td>
+							<td>{{ catalog.details }}</td>
+						</tr>
+						<tr>
+							<td><strong>{% trans "code" %}</strong>&nbsp:</td>
+							<td>{{ catalog.code }}</td>
+						</tr>
+					</table>			
+				</div>
+				<div class="col-md-3">
+					{% if catalog.photo.url != None %}
+						{% if catalog.photo.url == "/media/images/product01.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product01.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product02.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product02.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product03.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product03.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product04.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product04.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product05.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product05.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product06.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product06.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product07.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product07.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product08.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product08.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product09.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product09.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product10.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product10.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product11.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product11.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product12.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product12.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product13.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product13.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product14.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product14.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product15.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product15.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product16.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product16.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product17.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product17.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product18.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product18.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product19.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product19.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product20.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product20.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product21.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product21.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product22.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product22.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product23.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product23.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product24.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product24.jpg' %}" alt="{{ catalog.title }}" >    
+						{% elif catalog.photo.url == "/media/images/product25.jpg" %}
+							<img style="width:100%; max-width:200px;" src="{% static 'images/product25.jpg' %}" alt="{{ catalog.title }}" >    
+						{% else %}
+							{% if catalog.photo.url != None %}
+								<img style="width:100%; max-width:200px;" src="{{ catalog.photo.url}}" alt="{{ catalog.title }}" >
+							{% endif %}
+						{% endif %}		
+					{% endif %}	 
+				</div>
+			</div>
+		</div>
+		<div class="card-footer text-muted">
+			<a class="btn" style="width:100px" href="{% url 'catalog_list' %}">{% trans "Back" %}</a>    	
+		</div>
+	</div>	
+</div>
+{% if reviews.count > 0 %}
+<div class="row justify-content-center">
+	<h5>{% trans "Reviews" %}</h5>
+</div>
+{% for r in reviews %}
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h5>{% trans "Saleday" %} {{ r.saleday | date:"d.m.Y"}}</h5>
+			<h5>{{ r.username }}</h5>
+			<h6>{% trans "Rating" %} {{ r.rating }}</h6>
+		</div>
+		<div class="card-body">
+			<p>{{ r.details }}</p>
+		</div>
+	</div>	
+</div>
+{% endfor %}	
+{% else %}	
+<div class="row justify-content-center">
+	<h5>{% trans "No reviews yet" %}</h5>
+</div">
+{% endif %}	
+{% endblock content %}

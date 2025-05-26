@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "construction" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">		
+			<h4>{{ construction.title }}</h4>			
+			<h5>{{ construction.address }}</h5>			
+		</div>
+		<div class="card-body">
+			<p>{{ construction.details }}</p>			
+		</div>
+		<div class="card-footer">	
+			<p>{% trans "customer" %}: {{ construction.customer }}</p>
+			<p>{% trans "completion" %}: {{ construction.completion }}</p>
+			<p>{% trans "price" %}: {{ construction.price }}</p>
+		</div>		
+	</div>
+	<br>
+	<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'construction_index' %}">{% trans "Back" %}</a>    	
+</div>
+{% endblock content %}

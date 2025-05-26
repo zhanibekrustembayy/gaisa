@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "sale" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "Sale" %}</h2>
+<h4>{{ outgo.construction  }}</h4>
+<h4>{{ outgo.dateo| date:"d.m.Y"  }}</h4>
+<h4>{{ outgo.numb  }}</h4>
+<h2>{% trans "sale" %}</h2>
+<div class="row">
+	<a class="btn btn-outline-info" style="width:100px" onclick="history.back();">{% trans "Back" %}</a>    
+</div>
+<br>
+{% if sale.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "category" %}</th>
+				<th>{% trans "title" %}</th>
+				<th>{% trans "price" %}</th>
+				<th>{% trans "quantity" %}</th>
+				<th>{% trans "unit" %}</th>
+				<th><a href="{% url 'sale_create' outgo_id %}">{% trans "Add" %}</a></th>					
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in sale %}
+			<tr>				
+				<td>
+					<p>{{ p.catalog.category }}</p>
+				</td>
+				<td>
+					<p>{{ p.catalog.title }}</p>
+				</td>				
+				<td>
+					<p>{{ p.catalog.price }}</p>
+				</td>
+				<td>
+					<p>{{ p.quantity }}</p>
+				</td>
+				<td>
+					<p>{{ p.catalog.unit }}</p>
+				</td>
+				<td>
+					<a href="{% url 'sale_edit' p.id outgo_id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'sale_read' p.id outgo_id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'sale_delete' p.id outgo_id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'sale_create' outgo_id %}">{% trans "Create" %}</a>
+{% endif %}
+{% endblock content %}
+

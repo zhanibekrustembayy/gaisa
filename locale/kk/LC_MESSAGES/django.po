@@ -1,0 +1,641 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-21 08:00+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+#: .\building\forms.py:32 .\building\models.py:37
+#: .\templates\construction\index.html:12
+msgid "construction_title"
+msgstr "Құрылыс объектісінің атауы"
+
+#: .\building\forms.py:33 .\building\models.py:38
+msgid "construction_details"
+msgstr "Құрылыс объектісіне сипаттама"
+
+#: .\building\forms.py:56 .\templates\binding\index.html:12
+#: .\templates\binding\read.html:12
+msgid "binding_construction"
+msgstr "Құрылыс объектісі"
+
+#: .\building\forms.py:57 .\templates\binding\index.html:13
+#: .\templates\binding\read.html:13
+msgid "binding_investor"
+msgstr "Инвестор"
+
+#: .\building\forms.py:71 .\templates\investments\index.html:13
+#: .\templates\investments\read.html:13
+msgid "investments_construction"
+msgstr "Құрылыс объектісі"
+
+#: .\building\forms.py:72 .\templates\investments\index.html:14
+#: .\templates\investments\read.html:14
+msgid "investments_investor"
+msgstr "Инвестор"
+
+#: .\building\forms.py:92 .\building\forms.py:178
+msgid "Cannot be greater than the current date"
+msgstr "Ағымдағы күннен үлкен болуы мүмкін емес"
+
+#: .\building\forms.py:101 .\building\forms.py:187
+msgid "The number must be greater than zero"
+msgstr "Сан нөлден үлкен болуы керек"
+
+#: .\building\forms.py:113 .\building\models.py:139 .\building\models.py:174
+msgid "category_title"
+msgstr "Категория атауы"
+
+#: .\building\forms.py:137 .\templates\catalog\index.html:21
+#: .\templates\category\create.html:6 .\templates\category\edit.html:6
+#: .\templates\category\read.html:6 .\templates\sale\index.html:21
+msgid "category"
+msgstr "Категория"
+
+#: .\building\forms.py:145 .\building\forms.py:212
+msgid "Quantity must be greater than zero"
+msgstr "Саны нөлден үлкен болуы керек"
+
+#: .\building\forms.py:154
+msgid "Price must be greater than zero"
+msgstr "Баға нөлден жоғары болуы керек"
+
+#: .\building\forms.py:169 .\templates\construction\create.html:6
+#: .\templates\construction\edit.html:6 .\templates\construction\read.html:6
+#: .\templates\outgo\index.html:14
+msgid "construction"
+msgstr "Құрылыс объектісі"
+
+#: .\building\forms.py:200 .\templates\catalog\create.html:6
+#: .\templates\catalog\edit.html:6 .\templates\catalog\index.html:4
+#: .\templates\catalog\index.html:11
+msgid "catalog"
+msgstr "Каталог"
+
+#: .\building\forms.py:231
+msgid "Wrong date and time format"
+msgstr "Күн мен уақыт пішімі қате"
+
+#: .\building\models.py:39 .\templates\construction\index.html:13
+msgid "address"
+msgstr "Мекенжайы"
+
+#: .\building\models.py:40 .\templates\construction\index.html:14
+#: .\templates\construction\read.html:17
+msgid "customer"
+msgstr "Тұтынушы"
+
+#: .\building\models.py:41 .\templates\construction\index.html:15
+#: .\templates\construction\read.html:18
+msgid "completion"
+msgstr "Аяқтау күні"
+
+#: .\building\models.py:42 .\building\models.py:154 .\building\models.py:177
+#: .\templates\catalog\index.html:23 .\templates\catalog\read.html:20
+#: .\templates\construction\index.html:16
+#: .\templates\construction\read.html:19 .\templates\sale\index.html:23
+#: .\templates\sale\read.html:20
+msgid "price"
+msgstr "Бағасы"
+
+#: .\building\models.py:59 .\templates\investor\index.html:12
+msgid "fio"
+msgstr "Толық аты"
+
+#: .\building\models.py:60 .\templates\investor\index.html:13
+msgid "email"
+msgstr "EMail"
+
+#: .\building\models.py:61 .\templates\investor\index.html:14
+msgid "phone"
+msgstr "Телефон"
+
+#: .\building\models.py:63
+msgid "investor_photo"
+msgstr "Фото"
+
+#: .\building\models.py:99 .\templates\investments\index.html:12
+#: .\templates\investments\read.html:10
+msgid "datein"
+msgstr "Күні"
+
+#: .\building\models.py:102 .\templates\investments\index.html:15
+#: .\templates\investments\read.html:15
+msgid "amount"
+msgstr "Сомасы"
+
+#: .\building\models.py:120 .\templates\coming\index.html:14
+#: .\templates\coming\read.html:14
+msgid "organization"
+msgstr "Ұйымдастыру"
+
+#: .\building\models.py:121 .\templates\coming\index.html:12
+#: .\templates\coming\read.html:10
+msgid "datec"
+msgstr "Күні"
+
+#: .\building\models.py:122 .\building\models.py:202
+#: .\templates\coming\index.html:13 .\templates\coming\read.html:11
+#: .\templates\outgo\index.html:13 .\templates\outgo\read.html:11
+msgid "numb"
+msgstr "Сан"
+
+#: .\building\models.py:152 .\building\models.py:175
+msgid "catalog_title"
+msgstr "Өнім атауы"
+
+#: .\building\models.py:153 .\building\models.py:176
+msgid "catalog_details"
+msgstr "Сипаттама"
+
+#: .\building\models.py:155 .\building\models.py:178 .\building\models.py:223
+#: .\templates\catalog\index.html:24 .\templates\catalog\read.html:24
+#: .\templates\sale\index.html:24 .\templates\sale\read.html:24
+msgid "quantity"
+msgstr "Саны"
+
+#: .\building\models.py:156 .\building\models.py:179
+#: .\templates\catalog\index.html:25 .\templates\sale\index.html:25
+msgid "unit"
+msgstr "Өлшем бірлігі"
+
+#: .\building\models.py:173
+msgid "category_id"
+msgstr "category_id"
+
+#: .\building\models.py:180
+msgid "sale_quantity"
+msgstr "Сатылымдар"
+
+#: .\building\models.py:181 .\templates\catalog\list.html:47
+msgid "available"
+msgstr "Қол жетімді"
+
+#: .\building\models.py:201 .\templates\outgo\index.html:12
+#: .\templates\outgo\read.html:10
+msgid "dateo"
+msgstr "Күні"
+
+#: .\building\models.py:246 .\templates\news\index.html:12
+msgid "daten"
+msgstr "Күні"
+
+#: .\building\models.py:247
+msgid "title_news"
+msgstr "Жаңалықтар тақырыбы"
+
+#: .\building\models.py:248
+msgid "details_news"
+msgstr "Егжей"
+
+#: .\building\models.py:249
+msgid "photo_news"
+msgstr "Фото"
+
+#: .\templates\base.html:36
+msgid "Home"
+msgstr "Үй"
+
+#: .\templates\base.html:43 .\templates\contact.html:7
+msgid "contacts"
+msgstr "Контактілер"
+
+#: .\templates\base.html:46 .\templates\news\create.html:6
+#: .\templates\news\edit.html:6 .\templates\news\read.html:7
+msgid "news"
+msgstr "Жаңалықтар"
+
+#: .\templates\base.html:49 .\templates\base.html:61
+#: .\templates\construction\index.html:3 .\templates\construction\index.html:6
+#: .\templates\construction\list.html:4 .\templates\construction\list.html:8
+#: .\templates\index.html:96
+msgid "constructions"
+msgstr "Құрылыс объектілері"
+
+#: .\templates\base.html:52 .\templates\base.html:62
+#: .\templates\investor\index.html:3 .\templates\investor\index.html:6
+#: .\templates\investor\list.html:4 .\templates\investor\list.html:8
+msgid "investors"
+msgstr "Инвесторлар"
+
+#: .\templates\base.html:63 .\templates\binding\index.html:3
+#: .\templates\binding\index.html:6
+msgid "bindings"
+msgstr "Құрылыс объектілері және инвесторлар"
+
+#: .\templates\base.html:64 .\templates\investments\index.html:3
+#: .\templates\investments\index.html:6
+msgid "investmentss"
+msgstr "Инвестициялар"
+
+#: .\templates\base.html:66 .\templates\category\index.html:3
+#: .\templates\category\index.html:6
+msgid "categorys"
+msgstr "Өнім санаттары"
+
+#: .\templates\base.html:67 .\templates\coming\index.html:3
+#: .\templates\coming\index.html:6
+msgid "comings"
+msgstr "Түбіртек шоттары"
+
+#: .\templates\base.html:68 .\templates\outgo\index.html:3
+#: .\templates\outgo\index.html:6
+msgid "outgos"
+msgstr "Шығын шоттары"
+
+#: .\templates\base.html:70 .\templates\index.html:265
+#: .\templates\news\index.html:3 .\templates\news\index.html:6
+#: .\templates\news\list.html:4 .\templates\news\list.html:8
+msgid "newss"
+msgstr "Жаңалықтар"
+
+#: .\templates\base.html:75 .\templates\registration\my_account.html:4
+#: .\templates\registration\my_account.html:10
+msgid "My account"
+msgstr "Менің аккаунтым"
+
+#: .\templates\base.html:76
+#: .\templates\registration\password_change_form.html:9
+#: .\templates\registration\password_change_form.html:15
+msgid "Change password"
+msgstr "Құпия сөзді өзгерту"
+
+#: .\templates\base.html:78
+msgid "Log out"
+msgstr "Шығу"
+
+#: .\templates\base.html:83
+msgid "Log In"
+msgstr "Кіру"
+
+#: .\templates\base.html:85 .\templates\registration\signup.html:4
+#: .\templates\registration\signup.html:10
+msgid "Sign up"
+msgstr "Тіркелу"
+
+#: .\templates\binding\create.html:3 .\templates\catalog\create.html:3
+#: .\templates\catalog\index.html:58 .\templates\category\create.html:3
+#: .\templates\coming\create.html:3 .\templates\construction\create.html:3
+#: .\templates\investments\create.html:3 .\templates\investor\create.html:3
+#: .\templates\investor\index.html:55 .\templates\news\create.html:3
+#: .\templates\news\index.html:45 .\templates\outgo\create.html:3
+#: .\templates\sale\create.html:3 .\templates\sale\index.html:58
+msgid "Create"
+msgstr "Жасау"
+
+#: .\templates\binding\create.html:6 .\templates\binding\edit.html:6
+#: .\templates\binding\read.html:6
+msgid "binding"
+msgstr "Объектілер мен инвесторлар"
+
+#: .\templates\binding\create.html:13 .\templates\binding\edit.html:13
+#: .\templates\catalog\create.html:13 .\templates\catalog\edit.html:13
+#: .\templates\category\create.html:13 .\templates\category\edit.html:13
+#: .\templates\coming\create.html:13 .\templates\coming\edit.html:13
+#: .\templates\construction\create.html:13
+#: .\templates\construction\edit.html:13
+#: .\templates\investments\create.html:13 .\templates\investments\edit.html:13
+#: .\templates\investor\create.html:13 .\templates\investor\edit.html:13
+#: .\templates\news\create.html:13 .\templates\news\edit.html:13
+#: .\templates\outgo\create.html:13 .\templates\outgo\edit.html:13
+#: .\templates\sale\create.html:13 .\templates\sale\edit.html:13
+msgid "Save"
+msgstr "Сақтау"
+
+#: .\templates\binding\create.html:14 .\templates\binding\edit.html:14
+#: .\templates\binding\read.html:19 .\templates\catalog\create.html:14
+#: .\templates\catalog\details.html:104 .\templates\catalog\edit.html:14
+#: .\templates\catalog\index.html:13 .\templates\catalog\read.html:32
+#: .\templates\category\create.html:14 .\templates\category\edit.html:14
+#: .\templates\category\read.html:18 .\templates\coming\create.html:14
+#: .\templates\coming\edit.html:14 .\templates\coming\read.html:20
+#: .\templates\construction\create.html:14
+#: .\templates\construction\edit.html:14 .\templates\construction\read.html:23
+#: .\templates\investments\create.html:14 .\templates\investments\edit.html:14
+#: .\templates\investments\read.html:21 .\templates\investor\create.html:14
+#: .\templates\investor\edit.html:14 .\templates\investor\read.html:55
+#: .\templates\news\create.html:14 .\templates\news\edit.html:14
+#: .\templates\news\read.html:45 .\templates\outgo\create.html:14
+#: .\templates\outgo\edit.html:14 .\templates\outgo\read.html:20
+#: .\templates\sale\create.html:14 .\templates\sale\edit.html:14
+#: .\templates\sale\index.html:13 .\templates\sale\read.html:32
+msgid "Back"
+msgstr "Артқа"
+
+#: .\templates\binding\edit.html:3 .\templates\binding\index.html:28
+#: .\templates\catalog\edit.html:3 .\templates\catalog\index.html:48
+#: .\templates\category\edit.html:3 .\templates\category\index.html:24
+#: .\templates\coming\edit.html:3 .\templates\coming\index.html:36
+#: .\templates\construction\edit.html:3 .\templates\construction\index.html:40
+#: .\templates\investments\edit.html:3 .\templates\investments\index.html:36
+#: .\templates\investor\edit.html:3 .\templates\investor\index.html:45
+#: .\templates\news\edit.html:3 .\templates\news\index.html:35
+#: .\templates\outgo\edit.html:3 .\templates\outgo\index.html:36
+#: .\templates\sale\edit.html:3 .\templates\sale\index.html:48
+msgid "Change"
+msgstr "Өзгерту"
+
+#: .\templates\binding\index.html:15 .\templates\binding\index.html:38
+#: .\templates\catalog\index.html:26 .\templates\category\index.html:14
+#: .\templates\category\index.html:34 .\templates\coming\index.html:17
+#: .\templates\coming\index.html:46 .\templates\construction\index.html:18
+#: .\templates\construction\index.html:50
+#: .\templates\investments\index.html:17 .\templates\investments\index.html:46
+#: .\templates\investor\index.html:17 .\templates\news\index.html:15
+#: .\templates\outgo\index.html:17 .\templates\outgo\index.html:46
+#: .\templates\sale\index.html:26
+msgid "Add"
+msgstr "Қосу"
+
+#: .\templates\binding\index.html:29 .\templates\catalog\index.html:49
+#: .\templates\category\index.html:25 .\templates\coming\index.html:37
+#: .\templates\construction\index.html:41
+#: .\templates\investments\index.html:37 .\templates\investor\index.html:46
+#: .\templates\news\index.html:36 .\templates\outgo\index.html:37
+#: .\templates\sale\index.html:49
+msgid "View"
+msgstr "Көру"
+
+#: .\templates\binding\index.html:30 .\templates\catalog\index.html:50
+#: .\templates\category\index.html:26 .\templates\coming\index.html:38
+#: .\templates\construction\index.html:42
+#: .\templates\investments\index.html:38 .\templates\investor\index.html:47
+#: .\templates\news\index.html:37 .\templates\outgo\index.html:38
+#: .\templates\sale\index.html:50
+msgid "Delete"
+msgstr "Жою"
+
+#: .\templates\binding\read.html:3 .\templates\catalog\read.html:4
+#: .\templates\category\read.html:3 .\templates\coming\read.html:3
+#: .\templates\construction\read.html:3 .\templates\investments\read.html:3
+#: .\templates\investor\read.html:4 .\templates\news\read.html:4
+#: .\templates\outgo\read.html:3 .\templates\sale\read.html:4
+msgid "Read"
+msgstr "Көру"
+
+#: .\templates\catalog\details.html:4 .\templates\catalog\list.html:42
+msgid "Catalog details"
+msgstr "Сипаттама"
+
+#: .\templates\catalog\details.html:14
+msgid "Sale Quantity"
+msgstr "Сатылымдар"
+
+#: .\templates\catalog\details.html:17 .\templates\catalog\details.html:110
+msgid "Reviews"
+msgstr "Пікірлер"
+
+#: .\templates\catalog\details.html:21 .\templates\catalog\list.html:51
+msgid "Avg Rating"
+msgstr "Орташа рейтинг"
+
+#: .\templates\catalog\details.html:29
+msgid "info"
+msgstr "Ақпарат"
+
+#: .\templates\catalog\details.html:33 .\templates\catalog\read.html:16
+#: .\templates\sale\read.html:16
+msgid "details"
+msgstr "Описание"
+
+#: .\templates\catalog\details.html:37
+msgid "code"
+msgstr "Код"
+
+#: .\templates\catalog\details.html:116
+msgid "Saleday"
+msgstr "Сату күні"
+
+#: .\templates\catalog\details.html:118
+msgid "Rating"
+msgstr "Баға"
+
+#: .\templates\catalog\details.html:128
+msgid "No reviews yet"
+msgstr "Пікірлер жоқ"
+
+#: .\templates\catalog\index.html:7
+msgid "Coming"
+msgstr "Келе жатыр"
+
+#: .\templates\catalog\index.html:22 .\templates\news\index.html:13
+#: .\templates\sale\index.html:22
+msgid "title"
+msgstr "Тақырыбы"
+
+#: .\templates\catalog\list.html:4 .\templates\catalog\list.html:7
+msgid "Catalog list"
+msgstr "Өнім тізімі"
+
+#: .\templates\catalog\list.html:10
+msgid "Basket"
+msgstr "Себет"
+
+#: .\templates\catalog\list.html:56
+msgid "Add to basket"
+msgstr "Себетке қосу"
+
+#: .\templates\catalog\list.html:66
+msgid "Code"
+msgstr "Код"
+
+#: .\templates\category\index.html:12
+msgid "Category_title"
+msgstr "Категория атауы"
+
+#: .\templates\coming\create.html:6 .\templates\coming\edit.html:6
+#: .\templates\coming\read.html:6
+msgid "coming"
+msgstr "Келе жатыр"
+
+#: .\templates\coming\index.html:15 .\templates\coming\index.html:33
+#: .\templates\outgo\index.html:15
+msgid "catalogs"
+msgstr "Каталог"
+
+#: .\templates\index.html:4
+msgid "App name"
+msgstr "Gaisa"
+
+#: .\templates\index.html:310
+msgid "all newss"
+msgstr "Барлық жаңалықтар"
+
+#: .\templates\investments\create.html:6 .\templates\investments\edit.html:6
+#: .\templates\investments\read.html:6
+msgid "investments"
+msgstr "Инвестициялар"
+
+#: .\templates\investor\create.html:6 .\templates\investor\edit.html:6
+#: .\templates\investor\read.html:7
+msgid "investor"
+msgstr "Инвестор"
+
+#: .\templates\investor\index.html:15
+msgid "link"
+msgstr "Сілтеме"
+
+#: .\templates\outgo\create.html:6 .\templates\outgo\edit.html:6
+#: .\templates\outgo\read.html:6
+msgid "outgo"
+msgstr "Тұтыну"
+
+#: .\templates\outgo\index.html:33
+msgid "sales"
+msgstr "Сатылымдар"
+
+#: .\templates\outgo\read.html:14
+msgid "outgo_construction"
+msgstr "Құрылыс объектісі"
+
+#: .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Gaisa"
+
+#: .\templates\registration\logged_out.html:6
+msgid "Logged out!"
+msgstr "Жүйеден шықтыңыз!"
+
+#: .\templates\registration\logged_out.html:7
+msgid "Login again"
+msgstr "Қайтадан кіріңіз"
+
+#: .\templates\registration\login.html:7
+msgid "Incorrect login or password"
+msgstr "Логин немесе құпия сөз қате"
+
+#: .\templates\registration\login.html:12
+msgid "You dont have access"
+msgstr "Сізде рұқсат жоқ"
+
+#: .\templates\registration\login.html:14
+msgid "Login to see this page"
+msgstr "Бұл бетті көру үшін жүйеге кіріңіз"
+
+#: .\templates\registration\login.html:22
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: .\templates\registration\login.html:27
+msgid "Login"
+msgstr "Кіру"
+
+#: .\templates\registration\login.html:33
+msgid "Lost password?"
+msgstr "Құпия сөзді жоғалттыңыз ба?"
+
+#: .\templates\registration\login.html:34
+#: .\templates\registration\signup.html:15
+msgid "Create an account"
+msgstr "Аккаунты құру"
+
+#: .\templates\registration\my_account.html:15
+msgid "Save changes"
+msgstr "Өзгерістерді сақтау"
+
+#: .\templates\registration\password_change_done.html:5
+msgid "Password changed"
+msgstr "Құпия сөз өзгертілді"
+
+#: .\templates\registration\password_reset_complete.html:6
+msgid "Password reset completed!"
+msgstr "Құпия сөзді қалпына келтіру аяқталды!"
+
+#: .\templates\registration\password_reset_complete.html:7
+msgid "Log in again?"
+msgstr "Қайта кіру керек пе?"
+
+#: .\templates\registration\password_reset_confirm.html:5
+#: .\templates\registration\password_reset_confirm.html:12
+msgid "Password reset confirmation"
+msgstr "Құпия сөзді қалпына келтіруді растау"
+
+#: .\templates\registration\password_reset_confirm.html:18
+#: .\templates\registration\password_reset_form.html:10
+#: .\templates\registration\password_reset_form.html:16
+msgid "Reset password"
+msgstr "Құпия сөзді қалпына келтіру"
+
+#: .\templates\registration\password_reset_confirm.html:26
+msgid "Please enter (and confirm) your new password."
+msgstr "Жаңа құпия сөзіңізді енгізіңіз (және растаңыз)."
+
+#: .\templates\registration\password_reset_confirm.html:32
+msgid "New password:"
+msgstr "Жаңа құпия сөз:"
+
+#: .\templates\registration\password_reset_confirm.html:37
+msgid "Confirm password:"
+msgstr "Құпия сөзді растау:"
+
+#: .\templates\registration\password_reset_confirm.html:48
+msgid "Password reset failed"
+msgstr "Құпия сөзді қалпына келтіру сәтсіз аяқталды"
+
+#: .\templates\registration\password_reset_confirm.html:49
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr "Құпия сөзді қалпына келтіру сілтемесі жарамсыз болды, себебі ол әлдеқашан "
+"пайдаланылды. Жаңа құпия сөзді қалпына келтіруді сұраңыз."
+
+#: .\templates\registration\password_reset_done.html:6
+msgid "Password reset"
+msgstr "Құпия сөзді қалпына келтіру"
+
+#: .\templates\registration\password_reset_done.html:7
+msgid "Check your email"
+msgstr "Электрондық поштаңызды тексеріңіз"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Asked password reset email"
+msgstr "Құпия сөзді қалпына келтіру электрондық поштасы сұралды"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Follow the link below:"
+msgstr "Төмендегі сілтеме бойынша өтіңіз:"
+
+#: .\templates\registration\register_done.html:10
+msgid "Welcome"
+msgstr "Қош келдіңіз"
+
+#: .\templates\registration\register_done.html:11
+msgid "Your account has been successfully created."
+msgstr "Есептік жазбаңыз сәтті жасалды."
+
+#: .\templates\registration\register_done.html:11
+#: .\templates\registration\signup.html:20
+msgid "Log in"
+msgstr "Кіру"
+
+#: .\templates\registration\signup.html:20
+msgid "Already have an account?"
+msgstr "Есептік жазбаңыз бар ма?"
+
+#: .\templates\sale\create.html:6 .\templates\sale\edit.html:6
+#: .\templates\sale\index.html:4 .\templates\sale\index.html:11
+msgid "sale"
+msgstr "Сатылымдар"
+
+#: .\templates\sale\index.html:7
+msgid "Sale"
+msgstr "Сатылымдар"

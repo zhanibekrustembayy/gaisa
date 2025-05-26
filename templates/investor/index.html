@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "investors" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "investors" %}</h2>
+{% if investor.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "fio" %}</p></th>
+				<th><p>{% trans "email" %}</p></th>
+				<th><p>{% trans "phone" %}</p></th>
+				<th><p>{% trans "link" %}</p></th>
+				<!--<th></th>-->
+				<th><p><a href="{% url 'investor_create'%}">{% trans "Add" %}</a></p></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in investor %}
+			<tr>
+				<td>
+					<p>{{ n.fio }}</p>
+				</td>
+				<td>
+					<p><a href="mailto:{{ n.email }}">{{ n.email }}</a></p>						
+				</td>
+				<td>
+					<p>{{ n.phone }}</p>						
+				</td>
+				<td>
+					{% if n.link != None %}		
+						<p><a href="{{ n.link }}" target="_blank">{{ n.link }}</a></p>			
+					{% endif %}
+				</td>
+				<!--
+				<td>
+					{% if n.photo.url != None %}
+					<img style="width:100%; max-width:256px; padding:10px" src="{{ n.photo.url}}" alt="{{ n.title }}">
+					{% endif %}	
+				</td>
+				-->
+				<td>
+					<a href="{% url 'investor_edit' n.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'investor_read' n.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'investor_delete' n.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'investor_create'%}">{% trans "Create" %}</a>
+{% endif %}
+{% endblock content %}
+

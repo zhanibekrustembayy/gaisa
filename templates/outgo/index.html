@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "outgos" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "outgos" %}</h2>
+{% if outgo.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "dateo" %}</th>
+				<th>{% trans "numb" %}</th>
+				<th>{% trans "construction" %}</th>
+				<th>{% trans "catalogs" %}</th>				
+				<!--<th></th>-->
+				<th><a href="{% url 'outgo_create'%}">{% trans "Add" %}</a></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in outgo %}
+			<tr>
+				<td>
+					<p>{{ n.dateo | date:"d.m.Y" }}</p>	
+				</td>
+				<td>
+					<p>{{ n.numb }}</p>	
+				</td>
+				<td>				
+					<p>{{ n.construction }}</p>	
+				</td>
+				<td>
+					<p><a href="{% url 'sale_index' n.id%}">{% trans "sales" %}</a></p>	
+				</td>				
+				<td>
+					<a href="{% url 'outgo_edit' n.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'outgo_read' n.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'outgo_delete' n.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'outgo_create'%}">{% trans "Add" %}</a>
+{% endif %}
+{% endblock content %}

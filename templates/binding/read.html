@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "binding" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">		
+		</div>
+		<div class="card-body">
+			<p>{% trans "binding_construction" %}: {{ binding.construction }}</p>			
+			<p>{% trans "binding_investor" %}: {{ binding.investor }}</p>			
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<br>
+	<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'binding_index' %}">{% trans "Back" %}</a>    	
+</div>
+{% endblock content %}

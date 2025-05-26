@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Catalog list" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "Catalog list" %}</h2>
+<div class="row">
+	<a href="{% url 'export_excel' %}">Экспорт в Excel</a>
+</div>	
+{% if catalog.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "category" %}</th>
+				<th>{% trans "title" %}</th>
+				<th>{% trans "price" %}</th>
+				<th>{% trans "available" %}</th>
+				<th>{% trans "unit" %}</th>
+								
+			</tr>
+		</thead>
+		<tbody>
+			{% for p in catalog %}
+			<tr>				
+				<td>
+					<p>{{ p.category }}</p>
+				</td>
+				<td>
+					<p>{{ p.title }}</p>
+				</td>				
+				<td>
+					<p>{{ p.price }}</p>
+				</td>
+				<td>
+					<p>{{ p.available }}</p>
+				</td>
+				<td>
+					<p>{{ p.unit }}</p>
+				</td>
+						
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% endif %}
+<!-- {% if basket_count > 0 %} -->
+	<!-- <h4> -->
+		<!-- <a class="nav-link" href="{% url 'basket' %}">{% trans "Basket" %} ({{ basket_count }}) </a>	 -->
+	<!-- </h4> -->
+<!-- {% endif %} -->
+
+<!-- {% if catalog.count > 0 %} -->
+<!-- <div class="row"> -->
+<!-- {% if mess %} -->
+	<!-- {{ mess }} -->
+<!-- {% endif %} -->
+<!-- </div> -->
+<!-- <div class="row-catalog"> -->
+	<!-- <table id="myTable" style="width:100%"> -->
+		<!-- <thead> -->
+			<!-- <tr> -->
+				<!-- <th></th>				 -->
+			<!-- </tr> -->
+		<!-- </thead> -->
+		<!-- <tbody> -->
+			<!-- {% for c in catalog %} -->
+			<!-- <tr> -->
+				<!-- <td> -->
+					<!-- <div class="card"> -->
+						<!-- <div class="card-header"> -->
+							<!-- <h5>{{ c.category }}</h5> -->
+						<!-- </div> -->
+						<!-- <div class="card-body">					 -->
+							<!-- <div class="row"> -->
+								<!-- <div class="col-md-2"> -->
+									
+								<!-- </div> -->
+								<!-- <div class="col-md-8"> -->
+									<!-- <h5 class="card-title"><strong>{{ c.title }}</strong></h5> -->
+									<!-- <a class="btn btn-outline-info" href="{% url 'catalog_details' c.id %}">{% trans "Catalog details" %}</a> -->
+								<!-- </div> -->
+								<!-- <div class="col-md-2"> -->
+									<!-- <h4 class="card-title"><strong>{{ c.price }}</strong> 〒</h4> -->
+									<!-- {% if c.available != None %} -->
+										<!-- <h6 class="card-title"><strong>{% trans "available" %}</strong> {{ c.available }}</h6> -->
+									<!-- {% endif %} -->
+									<!-- {% if c.avg_rating != None %} -->
+										<!-- <p><div class="Stars" style='--rating: {{ c.avg_rating | stringformat:".1f" }};'></div></p>							 -->
+										<!-- <h6 class="card-title"><strong>{% trans "Avg Rating" %}</strong> {{ c.avg_rating | floatformat:1 }}</h6> -->
+									<!-- {% endif %} -->
+									<!-- {% if user.is_authenticated %} -->
+									<!-- <form method="post"> -->
+										<!-- {% csrf_token %} -->
+										<!-- <button type="submit" name="btn{{ c.id }}" id="btn_id{{ c.id }}" class="btn btn-outline-success" >{% trans "Add to basket" %}</button>						 -->
+										<!-- <input hidden type="text" name="catalog_id" size="0" value="{{ c.id }}"> -->
+										<!-- <input hidden type="text" name="price" size="0" value="{{ c.price }}"> -->
+										<!-- <input hidden type="text" name="user" size="0" value="{{ user.id }}"> -->
+									<!-- </form> -->
+									<!-- {% endif %} -->
+								<!-- </div> -->
+							<!-- </div> -->
+						<!-- </div> -->
+						<!-- <div class="card-footer text-muted"> -->
+							<!-- <p><strong>{% trans "Code" %}</strong>: {{ c.code }}<p> -->
+						<!-- </div> -->
+					<!-- </div> -->
+				<!-- </td>	 -->
+			<!-- </tr> -->
+			<!-- {% endfor %}	 -->
+		<!-- </tbody> -->
+	<!-- </table>	 -->
+<!-- </div> -->
+<!-- {% endif %} -->
+{% endblock content %}
+

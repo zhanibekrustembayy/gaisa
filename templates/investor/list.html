@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "investors" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "investors" %}</h3>
+</div>
+	{% load humanize %}
+
+{% if investor.count > 0 %}
+<div class="container">
+	<div class="row">	
+		{% for n in investor %}
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+			<div class="card" style="width:100%">
+				<div class="card-header">
+					<h5>{{ n.fio }}</h5>
+				</div>
+				<div class="card-body">					
+					<div class="row">
+						<div class="col-md-9">
+							<p>{{ n.phone }}</p>
+							<p><a href="mailto:{{ n.email }}">{{ n.email }}</a></p>	
+						</div>								
+						<div class="col-md-3">
+							{% if n.photo.url == "/ media /images/investor1.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor1.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% elif n.photo.url == "/ media /images/investor2.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor2.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% elif n.photo.url == "/ media /images/investor3.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor3.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% elif n.photo.url == "/ media /images/investor4.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor4.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% elif n.photo.url == "/ media /images/investor5.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor5.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% elif n.photo.url == "/ media /images/investor6.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor6.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% elif n.photo.url == "/ media /images/investor7.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor7.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% elif n.photo.url == "/ media /images/investor8.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor8.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% elif n.photo.url == "/ media /images/investor9.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor9.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% elif n.photo.url == "/ media /images/investor10.jpeg" %}
+								<img style="width:100%; max-width:400px;" src="{% static 'images/investor10.jpeg' %}" alt="{{ n.title }}" title="{{ n.details }}">    
+							{% else %}
+								{% if n.photo.url != None %}
+									<img style="width:100%; max-width:400px;" src="{{ n.photo.url}}" alt="{{ n.title }}" title="{{ n.details }}">
+								{% endif %}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+				<div class="card-footer text-muted">
+					{% if n.link != None %}		
+						<p><a href="{{ n.link }}" target="_blank">{{ n.link }}</a></p>			
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endif %}
+{% endblock content %}
+

@@ -1,0 +1,312 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App name" %}{% endblock title %}
+{% block header %}
+
+{% endblock header %}
+{% block content %}
+<div class="div-width-100-text-center">
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h1>«ҒАЙСА KZ» ЖШС</h1>	
+	{% else %}
+		<h1>ТОО «ҒАЙСА KZ»</h1>	
+	{% endif %}				
+</div>
+<div class="part0">
+	<div class="row">
+		{% if LANGUAGE_CODE == 'kk' %}
+			<h2 style="text-transform: uppercase; text-align: center;">Қош келдіңіз</h2>	
+		{% else %}
+			<h2 style="text-transform: uppercase; text-align: center;">Добро пожаловать</h2>	
+		{% endif %}		
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			{% if LANGUAGE_CODE == 'kk' %}
+				<p>Біздің компания құрылыс нарығында сөзсіз көшбасшы болып табылады.</p>
+				<p>Біз құрылыс нарығында 14 жылдық тәжірибесі бар көшбасшымыз!</p>
+				<p>Жұмыс тиімділігіне өндірістік процестерді толық автоматтандыру және жетекші әлемдік өндірушілердің жабдықтарын пайдалану арқылы қол жеткізіледі.</p>
+			{% else %}
+				<p>Наша компания является несомненным лидером на строительном рынке.</p>	
+				<p>Мы лидер с 14-летним опытом на строительном рынке!</p>
+				<p>Эфективность работы достигается за счет полной автоматизацией производственных процессов и использования оборудования ведущих мировых производителей.</p>
+			{% endif %}	
+		</div>
+		<div class="col-md-4">
+			<img src="{% static 'images/logo.png' %}" alt="dance" style="width:100%; padding: 10px;">
+		</div>
+	</div>
+</div>
+<hr>
+
+<div class="div-width-100-text-center">
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h1>Біз құрылысшылармыз</h1>	
+	{% else %}
+		<h1>Мы строители</h1>	
+	{% endif %}	
+</div>
+<div class="part1">
+	<div class="row" style="margin-top: 200px; margin-bottom: 200px" >
+		{% if LANGUAGE_CODE == 'kk' %}			
+			<h2 style="text-transform: uppercase">Біз сіздің арманыңызды жасаймыз</h2>
+			<p>Нысандарды салу, реконструкциялау және жөндеу саласындағы<br> мамандандырылған құрылыс компаниясы</p>
+		{% else %}
+			<h2 style="text-transform: uppercase">Мы построим Вашу мечту</h2>
+			<p>Специализированная строительная компания в области строительства,<br> реконструкции и ремонта объектов</p>
+		{% endif %}				
+	</div>	
+</div>
+<hr>
+
+<div class="construction">
+	<div class="row">
+		{% if construction.count > 0 %}
+			{% for n in construction %}
+				<div class="col-lg-3 border" >
+					<div style="background-color: Bisque;padding: 10px; margin: 1px; height: 100%">
+						<h5>{{ n.title }}</h5>
+						<!-- <p>{{ n.address }}</p>		 -->
+						<p><strong>{% trans "customer" %}: </strong>{{ n.customer }}</p>
+						<p><strong>{% trans "price" %}: </strong>{{ n.price }}</p>
+						<!-- <p><strong>{{ "completion" }}: </strong>{{ n.completion }}</p>						 -->
+					</div>
+
+					<!-- <div class="card"> -->
+						<!-- <div class="card-header"> -->
+							<!-- <h5>{{ n.title }}</h5> -->
+							<!-- <p>{{ n.address }}</p>								 -->
+						<!-- </div> -->
+						<!-- <div class="card-body">					 -->
+							<!-- <div class="row"> -->
+								<!-- <p><strong>{{ "customer" }}: </strong>{{ n.customer }}</p> -->
+								<!-- <p><strong>{{ "price" }}: </strong>{{ n.price }}</p>																		 -->
+							<!-- </div> -->
+						<!-- </div> -->
+						<!-- <div class="card-footer text-muted"> -->
+							<!-- <p><strong>{{ "completion" }}: </strong>{{ n.completion }}</p>						 -->
+						<!-- </div> -->
+					<!-- </div> -->
+				</div>
+			{% endfor %}
+		{% endif %}						
+	</div>
+	<div class="row" style="margin-top: 20px;">
+		<h3 style="text-align: center;"><a href="{% url 'construction_list'%}">{% trans "constructions" %}</a></h3>
+	</div>	
+</div>
+<hr>
+
+<div class="div-width-100-text-center">
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Біз не ұсынамыз</h3>	
+	{% else %}
+		<h3>Что мы предлагаем</h3>	
+	{% endif %}	
+</div>
+<div class="part2">
+	<div class="row" style="margin-top: 100px;">
+		<div class="col-md-4">	
+			<img class="img-center2" src="{% static 'images/construction01.png' %}" style="height:144px; width:144px; padding: 10px;">
+			{% if LANGUAGE_CODE == 'kk' %}	
+				<h2 style="text-transform: uppercase; text-align: center;">Құрылыс қызметтері</h2>
+				<p style="text-align: center;">Біздің қызметтер әрқашан сапалы</p>	
+			{% else %}
+				<h2 style="text-transform: uppercase; text-align: center;">Строительные услуги</h2>
+				<p style="text-align: center;">Наши услуги всегда качественные</p>			
+			{% endif %}	
+		</div>
+		<div class="col-md-4">	
+			<img class="img-center2" src="{% static 'images/construction02.png' %}" style="height:144px; width:144px; padding: 10px;">
+			{% if LANGUAGE_CODE == 'kk' %}	
+				<h2 style="text-transform: uppercase; text-align: center;">Ғимаратты жөндеу</h2>
+				<p style="text-align: center;">Біз кез-келген күрделіліктегі ғимараттарды жөндейміз</p>	
+			{% else %}
+				<h2 style="text-transform: uppercase; text-align: center;">Ремонт здания</h2>
+				<p style="text-align: center;">Выполняем ремонт зданий любой сложности</p>			
+			{% endif %}	
+		</div>
+		<div class="col-md-4">	
+			<img class="img-center2" src="{% static 'images/construction03.png' %}" style="height:144px; width:144px; padding: 10px;">
+			{% if LANGUAGE_CODE == 'kk' %}	
+				<h2 style="text-transform: uppercase; text-align: center;">Интерьер дизайны</h2>
+				<p style="text-align: center;">Бізде интерьердің көптеген түрлері бар</p>	
+			{% else %}
+				<h2 style="text-transform: uppercase; text-align: center;">Дизайн интерьера</h2>
+				<p style="text-align: center;">У нас есть множество типов интерьеров</p>			
+			{% endif %}	
+		</div>
+	</div>
+	<div class="row" style="margin-top: 100px;">
+		<div class="col-md-4">
+			<img class="img-center2" src="{% static 'images/construction04.png' %}" style="height:144px; width:144px; padding: 10px;">
+			{% if LANGUAGE_CODE == 'kk' %}	
+				<h2 style="text-transform: uppercase; text-align: center;">Дизайн & жоспарлау</h2>
+				<p style="text-align: center;">Біз сіз армандаған дизайнды жасаймыз</p>	
+			{% else %}
+				<h2 style="text-transform: uppercase; text-align: center;">Дизайн & Планирование</h2>
+				<p style="text-align: center;">Мы создаём дизайн, о котором вы мечтали</p>			
+			{% endif %}	
+		</div>
+		<div class="col-md-4">	
+			<img class="img-center2" src="{% static 'images/construction05.png' %}" style="height:144px; width:144px; padding: 10px;">
+			{% if LANGUAGE_CODE == 'kk' %}	
+				<h2 style="text-transform: uppercase; text-align: center;">Іс қағаздары</h2>
+				<p style="text-align: center;">Құжаттарды еш қиындықсыз рәсімдейміз</p>	
+			{% else %}
+				<h2 style="text-transform: uppercase; text-align: center;">Оформление документации</h2>
+				<p style="text-align: center;">Оформляем документы без проблем </p>			
+			{% endif %}	
+		</div>
+		<div class="col-md-4">	
+			<img class="img-center2" src="{% static 'images/construction06.png' %}" style="height:144px; width:144px; padding: 10px;">
+			{% if LANGUAGE_CODE == 'kk' %}	
+				<h2 style="text-transform: uppercase; text-align: center;">Кәсіби қолдау</h2>
+				<p style="text-align: center;">Біз сенімді кәсіби қолдау көрсетеміз</p>	
+			{% else %}
+				<h2 style="text-transform: uppercase; text-align: center;">Профессиональная поддержка</h2>
+				<p style="text-align: center;">Оказываем надежную Профессиональную поддержку</p>			
+			{% endif %}	
+		</div>
+	</div>	
+</div>
+<hr>
+
+<div class="div-width-100-text-center">
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Бірте-бірте</h3>	
+		<h3>Біз қалай жұмыс істеп жатырмыз</h3>
+	{% else %}
+		<h3>Шаг за шагом</h3>	
+		<h3>Как мы работаем</h3>	
+	{% endif %}	
+</div>
+<div class="part3">
+	<div class="row" style="margin-top: 100px;">
+		<div class="col-md-3">	
+			<div style="background-color: LightYellow;padding: 10px; margin: 1px; height: 100%">
+				<img class="img-center2" src="{% static 'images/construction07.png' %}" style="height:144px; width:144px; padding: 10px;">
+				{% if LANGUAGE_CODE == 'kk' %}	
+					<h2 style="text-transform: uppercase; text-align: center;">Жоспарлау</h2>
+					<!-- <p>Біз нарықта қызмет көрсету секторында жұмыс істейміз және тұтынушыларды қуантамыз</p>	 -->
+				{% else %}
+					<h2 style="text-transform: uppercase; text-align: center;">Планирование</h2>
+					<!-- <p>Мы работаем на рынке в сфере услуг и радуем клиентов</p>			 -->
+				{% endif %}	
+			</div>
+		</div>
+		<div class="col-md-3">	
+			<div style="background-color: LightYellow;padding: 10px; margin: 1px; height: 100%">
+				<img class="img-center2" src="{% static 'images/construction08.png' %}" style="height:144px; width:144px; padding: 10px;">
+				{% if LANGUAGE_CODE == 'kk' %}	
+					<h2 style="text-transform: uppercase; text-align: center;">Дизайн</h2>
+					<!-- <p>Біз нарықта қызмет көрсету секторында жұмыс істейміз және тұтынушыларды қуантамыз</p>	 -->
+				{% else %}
+					<h2 style="text-transform: uppercase; text-align: center;">Дизайн</h2>
+					<!-- <p>Мы работаем на рынке в сфере услуг и радуем клиентов</p>			 -->
+				{% endif %}	
+			</div>
+		</div>
+		<div class="col-md-3">	
+			<div style="background-color: LightYellow;padding: 10px; margin: 1px; height: 100%">
+				<img class="img-center2" src="{% static 'images/construction09.png' %}" style="height:144px; width:144px; padding: 10px;">
+				{% if LANGUAGE_CODE == 'kk' %}	
+					<h2 style="text-transform: uppercase; text-align: center;">Құрылыс</h2>
+					<!-- <p>Біз нарықта қызмет көрсету секторында жұмыс істейміз және тұтынушыларды қуантамыз</p>	 -->
+				{% else %}
+					<h2 style="text-transform: uppercase; text-align: center;">Строительство</h2>
+					<!-- <p>Мы работаем на рынке в сфере услуг и радуем клиентов</p>			 -->
+				{% endif %}	
+			</div>	
+		</div>	
+		<div class="col-md-3">
+			<div style="background-color: LightYellow;padding: 10px; margin: 1px; height: 100%">
+				<img class="img-center2" src="{% static 'images/construction10.png' %}" style="height:144px; width:144px; padding: 10px;">
+				{% if LANGUAGE_CODE == 'kk' %}	
+					<h2 style="text-transform: uppercase; text-align: center;">Аяқтау</h2>
+					<!-- <p>Біз нарықта қызмет көрсету секторында жұмыс істейміз және тұтынушыларды қуантамыз</p>	 -->
+				{% else %}
+					<h2 style="text-transform: uppercase; text-align: center;">Финиш</h2>
+					<!-- <p>Мы работаем на рынке в сфере услуг и радуем клиентов</p>			 -->
+				{% endif %}	
+			</div>		
+		</div>		
+	</div>	
+</div>
+<hr>
+
+<div class="div-width-100-text-center">
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h3>Біздің тапсырмалар</h3>
+	{% else %}
+		<h3>Наши задачи</h3>	
+	{% endif %}	
+</div>
+<div class="part4">
+	<div class="row" style="margin-top: 100px;">
+		<div class="col-md-9">	
+		</div>
+		<div class="col-md-3">	
+			<div style="background-color: LightYellow;padding: 10px; margin: 1px; height: 100%">
+				{% if LANGUAGE_CODE == 'kk' %}
+					<p style="text-align: left;">Компанияның негізгі қызметі: кез келген күрделіліктегі кеңсе ғимараттары мен құрылыстарын салу және реконструкциялау, ғимараттарды күрделі жөндеу, коттедждер салу, үйлер салу, дүкендер салу, кеңселерді жөндеу, монсардтарды салу</p>
+				{% else %}
+					<p style="text-align: left;">Основное направление деятельности компании: строительство и реконструкция офисных зданий и сооружений любой сложности, капитальный ремонт зданий, строительство коттеджей, строительство домов, строительство магазинов, ремонт офисов, строительство монсард</p>
+				{% endif %}			
+			</div>	
+		</div>	
+	</div>	
+</div>
+<hr>
+
+<div class="jumbotron">
+	<div class="div-width-100-text-center">
+		<h3>{% trans "newss" %}</h3>
+	</div>
+	<hr class="my-4">
+	<div class="row">
+		{% if news1.count > 0 %}
+		<div class="col-lg-9 border" style="padding:10px;">
+			{% for c in news1 %}
+				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
+				{% if c.photo.url == "/ media /images/news7.jpeg" %}
+					<img class="img-center" src="{% static 'images/news7.jpeg' %}" alt="{{ c.title }}" title="{{ c.details }}">
+				{% else %}
+					{% if c.photo.url != None %}
+						<img class="img-center" src="{{ c.photo.url}}" alt="{{ c.title }}" title="{{ c.details }}">
+					{% endif %}
+				{% endif %}
+				<h4><a href="{% url 'news_read' c.id %}">{{ c.title }}</a></h4>
+				<p>{{ c.details }}</p>
+			{% endfor %}
+		</div>
+		<div class="col-lg-3 border" style="padding:10px;">
+			{% if news24.count > 0 %}
+				{% for c in news24 %}
+				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
+				<div class="row">
+					{% if c.photo.url == "/ media /images/news4.jpeg" %}
+						<img class="img-center3" src="{% static 'images/news4.jpeg' %}" alt="{{ c.title }}" title="{{ c.details }}">
+					{% elif c.photo.url == "/ media /images/news5.jpeg" %}
+						<img class="img-center3" src="{% static 'images/news5.jpeg' %}" alt="{{ c.title }}" title="{{ c.details }}">
+					{% elif c.photo.url == "/ media /images/news6.jpeg" %}
+						<img class="img-center3" src="{% static 'images/news6.jpeg' %}" alt="{{ c.title }}" title="{{ c.details }}">
+					{% else %}
+						{% if n.photo.url != None %}
+							<img class="img-center3" src="{{ c.photo.url}}" alt="{{ c.title }}" title="{{ c.details }}">
+						{% endif %}
+					{% endif %}
+				</div>
+				<div class="row">
+					<h5><a href="{% url 'news_read' c.id %}">{{ c.title }}</a></h5>
+				</div>
+				<hr class="my-4">
+				{% endfor %}
+			{% endif %}
+		</div>
+		{% endif %}
+	</div>
+	<h3 style="text-align: center;" ><a href="{% url 'news_list' %}">{% trans "all newss" %}</a></h3>
+</div>
+{% endblock content %}

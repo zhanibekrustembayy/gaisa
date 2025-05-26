@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h6>{{ catalog.category }}</h6>
+			<h5>{{ catalog.title }}</h5>			
+		</div>
+		<div class="card-body">
+			<table>
+				<tr>
+					<td><strong>{% trans "details" %}</strong>&nbsp:</td>
+					<td>{{ catalog.details }}</td>
+				</tr>				        
+				<tr>
+					<td><strong>{% trans "price" %}</strong>&nbsp:</td>
+					<td>{{ catalog.price }}  〒</td>
+				</tr>
+				<tr>
+					<td><strong>{% trans "quantity" %}</strong>&nbsp:</td>
+					<td>{{ catalog.quantity }}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="card-footer text-muted">			
+		</div>
+	</div>
+	<a class="btn btn-outline-info" style="width:100px" href="{% url 'catalog_index' coming_id  %}">{% trans "Back" %}</a>    	
+</div>
+{% endblock content %}

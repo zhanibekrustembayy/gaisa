@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "investments" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">	
+			<p>{% trans "datein" %}: {{ n.datein | date:"d.m.Y"  }}</p>					
+		</div>
+		<div class="card-body">
+			<p>{% trans "investments_construction" %}: {{ investments.construction }}</p>			
+			<p>{% trans "investments_investor" %}: {{ investments.investor }}</p>			
+			<p>{% trans "amount" %}: {{ investments.amount }}</p>			
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<br>
+	<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'investments_index' %}">{% trans "Back" %}</a>    	
+</div>
+{% endblock content %}

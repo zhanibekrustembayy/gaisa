@@ -1,0 +1,643 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-21 08:00+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\building\forms.py:32 .\building\models.py:37
+#: .\templates\construction\index.html:12
+msgid "construction_title"
+msgstr "Название объекта строительства"
+
+#: .\building\forms.py:33 .\building\models.py:38
+msgid "construction_details"
+msgstr "Описание объекта строительства"
+
+#: .\building\forms.py:56 .\templates\binding\index.html:12
+#: .\templates\binding\read.html:12
+msgid "binding_construction"
+msgstr "Объект строительства"
+
+#: .\building\forms.py:57 .\templates\binding\index.html:13
+#: .\templates\binding\read.html:13
+msgid "binding_investor"
+msgstr "Инвестор"
+
+#: .\building\forms.py:71 .\templates\investments\index.html:13
+#: .\templates\investments\read.html:13
+msgid "investments_construction"
+msgstr "Объект строительства"
+
+#: .\building\forms.py:72 .\templates\investments\index.html:14
+#: .\templates\investments\read.html:14
+msgid "investments_investor"
+msgstr "Инвестор"
+
+#: .\building\forms.py:92 .\building\forms.py:178
+msgid "Cannot be greater than the current date"
+msgstr "Не может быть больше текущей даты"
+
+#: .\building\forms.py:101 .\building\forms.py:187
+msgid "The number must be greater than zero"
+msgstr "Число должно быть больше нуля"
+
+#: .\building\forms.py:113 .\building\models.py:139 .\building\models.py:174
+msgid "category_title"
+msgstr "Название категории"
+
+#: .\building\forms.py:137 .\templates\catalog\index.html:21
+#: .\templates\category\create.html:6 .\templates\category\edit.html:6
+#: .\templates\category\read.html:6 .\templates\sale\index.html:21
+msgid "category"
+msgstr "Категория"
+
+#: .\building\forms.py:145 .\building\forms.py:212
+msgid "Quantity must be greater than zero"
+msgstr "Количество должно быть больше нуля"
+
+#: .\building\forms.py:154
+msgid "Price must be greater than zero"
+msgstr "Цена должна быть больше нуля"
+
+#: .\building\forms.py:169 .\templates\construction\create.html:6
+#: .\templates\construction\edit.html:6 .\templates\construction\read.html:6
+#: .\templates\outgo\index.html:14
+msgid "construction"
+msgstr "Объект строительства"
+
+#: .\building\forms.py:200 .\templates\catalog\create.html:6
+#: .\templates\catalog\edit.html:6 .\templates\catalog\index.html:4
+#: .\templates\catalog\index.html:11
+msgid "catalog"
+msgstr "Каталог товаров"
+
+#: .\building\forms.py:231
+msgid "Wrong date and time format"
+msgstr "Неправильный формат даты и времени"
+
+#: .\building\models.py:39 .\templates\construction\index.html:13
+msgid "address"
+msgstr "Адрес"
+
+#: .\building\models.py:40 .\templates\construction\index.html:14
+#: .\templates\construction\read.html:17
+msgid "customer"
+msgstr "Заказчик"
+
+#: .\building\models.py:41 .\templates\construction\index.html:15
+#: .\templates\construction\read.html:18
+msgid "completion"
+msgstr "Дата завершения"
+
+#: .\building\models.py:42 .\building\models.py:154 .\building\models.py:177
+#: .\templates\catalog\index.html:23 .\templates\catalog\read.html:20
+#: .\templates\construction\index.html:16
+#: .\templates\construction\read.html:19 .\templates\sale\index.html:23
+#: .\templates\sale\read.html:20
+msgid "price"
+msgstr "Стоимость"
+
+#: .\building\models.py:59 .\templates\investor\index.html:12
+msgid "fio"
+msgstr "ФИО"
+
+#: .\building\models.py:60 .\templates\investor\index.html:13
+msgid "email"
+msgstr "EMail"
+
+#: .\building\models.py:61 .\templates\investor\index.html:14
+msgid "phone"
+msgstr "Телефон"
+
+#: .\building\models.py:63
+msgid "investor_photo"
+msgstr "Фотография"
+
+#: .\building\models.py:99 .\templates\investments\index.html:12
+#: .\templates\investments\read.html:10
+msgid "datein"
+msgstr "Дата"
+
+#: .\building\models.py:102 .\templates\investments\index.html:15
+#: .\templates\investments\read.html:15
+msgid "amount"
+msgstr "Сумма"
+
+#: .\building\models.py:120 .\templates\coming\index.html:14
+#: .\templates\coming\read.html:14
+msgid "organization"
+msgstr "Организация"
+
+#: .\building\models.py:121 .\templates\coming\index.html:12
+#: .\templates\coming\read.html:10
+msgid "datec"
+msgstr "Дата"
+
+#: .\building\models.py:122 .\building\models.py:202
+#: .\templates\coming\index.html:13 .\templates\coming\read.html:11
+#: .\templates\outgo\index.html:13 .\templates\outgo\read.html:11
+msgid "numb"
+msgstr "Номер"
+
+#: .\building\models.py:152 .\building\models.py:175
+msgid "catalog_title"
+msgstr "Название товара"
+
+#: .\building\models.py:153 .\building\models.py:176
+msgid "catalog_details"
+msgstr "Описание"
+
+#: .\building\models.py:155 .\building\models.py:178 .\building\models.py:223
+#: .\templates\catalog\index.html:24 .\templates\catalog\read.html:24
+#: .\templates\sale\index.html:24 .\templates\sale\read.html:24
+msgid "quantity"
+msgstr "Количество"
+
+#: .\building\models.py:156 .\building\models.py:179
+#: .\templates\catalog\index.html:25 .\templates\sale\index.html:25
+msgid "unit"
+msgstr "Единица измерения"
+
+#: .\building\models.py:173
+msgid "category_id"
+msgstr ""
+
+#: .\building\models.py:180
+msgid "sale_quantity"
+msgstr "Продано"
+
+#: .\building\models.py:181 .\templates\catalog\list.html:47
+msgid "available"
+msgstr "Доступно"
+
+#: .\building\models.py:201 .\templates\outgo\index.html:12
+#: .\templates\outgo\read.html:10
+msgid "dateo"
+msgstr "Дата"
+
+#: .\building\models.py:246 .\templates\news\index.html:12
+msgid "daten"
+msgstr "Дата"
+
+#: .\building\models.py:247
+msgid "title_news"
+msgstr "Заголовок новости"
+
+#: .\building\models.py:248
+msgid "details_news"
+msgstr "Детали"
+
+#: .\building\models.py:249
+msgid "photo_news"
+msgstr "Фотография"
+
+#: .\templates\base.html:36
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\base.html:43 .\templates\contact.html:7
+msgid "contacts"
+msgstr "Контакты"
+
+#: .\templates\base.html:46 .\templates\news\create.html:6
+#: .\templates\news\edit.html:6 .\templates\news\read.html:7
+msgid "news"
+msgstr "Новости"
+
+#: .\templates\base.html:49 .\templates\base.html:61
+#: .\templates\construction\index.html:3 .\templates\construction\index.html:6
+#: .\templates\construction\list.html:4 .\templates\construction\list.html:8
+#: .\templates\index.html:96
+msgid "constructions"
+msgstr "Объекты строительства"
+
+#: .\templates\base.html:52 .\templates\base.html:62
+#: .\templates\investor\index.html:3 .\templates\investor\index.html:6
+#: .\templates\investor\list.html:4 .\templates\investor\list.html:8
+msgid "investors"
+msgstr "Инвесторы"
+
+#: .\templates\base.html:63 .\templates\binding\index.html:3
+#: .\templates\binding\index.html:6
+msgid "bindings"
+msgstr "Объекты строительства и инвесторы"
+
+#: .\templates\base.html:64 .\templates\investments\index.html:3
+#: .\templates\investments\index.html:6
+msgid "investmentss"
+msgstr "Инвестиции"
+
+#: .\templates\base.html:66 .\templates\category\index.html:3
+#: .\templates\category\index.html:6
+msgid "categorys"
+msgstr "Категории товара"
+
+#: .\templates\base.html:67 .\templates\coming\index.html:3
+#: .\templates\coming\index.html:6
+msgid "comings"
+msgstr "Приходные накладные"
+
+#: .\templates\base.html:68 .\templates\outgo\index.html:3
+#: .\templates\outgo\index.html:6
+msgid "outgos"
+msgstr "Расходные накладные"
+
+#: .\templates\base.html:70 .\templates\index.html:265
+#: .\templates\news\index.html:3 .\templates\news\index.html:6
+#: .\templates\news\list.html:4 .\templates\news\list.html:8
+msgid "newss"
+msgstr "Новости"
+
+#: .\templates\base.html:75 .\templates\registration\my_account.html:4
+#: .\templates\registration\my_account.html:10
+msgid "My account"
+msgstr "Мой аккаунт"
+
+#: .\templates\base.html:76
+#: .\templates\registration\password_change_form.html:9
+#: .\templates\registration\password_change_form.html:15
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: .\templates\base.html:78
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\templates\base.html:83
+msgid "Log In"
+msgstr "Авторизоваться"
+
+#: .\templates\base.html:85 .\templates\registration\signup.html:4
+#: .\templates\registration\signup.html:10
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: .\templates\binding\create.html:3 .\templates\catalog\create.html:3
+#: .\templates\catalog\index.html:58 .\templates\category\create.html:3
+#: .\templates\coming\create.html:3 .\templates\construction\create.html:3
+#: .\templates\investments\create.html:3 .\templates\investor\create.html:3
+#: .\templates\investor\index.html:55 .\templates\news\create.html:3
+#: .\templates\news\index.html:45 .\templates\outgo\create.html:3
+#: .\templates\sale\create.html:3 .\templates\sale\index.html:58
+msgid "Create"
+msgstr "Добавить"
+
+#: .\templates\binding\create.html:6 .\templates\binding\edit.html:6
+#: .\templates\binding\read.html:6
+msgid "binding"
+msgstr "Объекты и инвесторы"
+
+#: .\templates\binding\create.html:13 .\templates\binding\edit.html:13
+#: .\templates\catalog\create.html:13 .\templates\catalog\edit.html:13
+#: .\templates\category\create.html:13 .\templates\category\edit.html:13
+#: .\templates\coming\create.html:13 .\templates\coming\edit.html:13
+#: .\templates\construction\create.html:13
+#: .\templates\construction\edit.html:13
+#: .\templates\investments\create.html:13 .\templates\investments\edit.html:13
+#: .\templates\investor\create.html:13 .\templates\investor\edit.html:13
+#: .\templates\news\create.html:13 .\templates\news\edit.html:13
+#: .\templates\outgo\create.html:13 .\templates\outgo\edit.html:13
+#: .\templates\sale\create.html:13 .\templates\sale\edit.html:13
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\binding\create.html:14 .\templates\binding\edit.html:14
+#: .\templates\binding\read.html:19 .\templates\catalog\create.html:14
+#: .\templates\catalog\details.html:104 .\templates\catalog\edit.html:14
+#: .\templates\catalog\index.html:13 .\templates\catalog\read.html:32
+#: .\templates\category\create.html:14 .\templates\category\edit.html:14
+#: .\templates\category\read.html:18 .\templates\coming\create.html:14
+#: .\templates\coming\edit.html:14 .\templates\coming\read.html:20
+#: .\templates\construction\create.html:14
+#: .\templates\construction\edit.html:14 .\templates\construction\read.html:23
+#: .\templates\investments\create.html:14 .\templates\investments\edit.html:14
+#: .\templates\investments\read.html:21 .\templates\investor\create.html:14
+#: .\templates\investor\edit.html:14 .\templates\investor\read.html:55
+#: .\templates\news\create.html:14 .\templates\news\edit.html:14
+#: .\templates\news\read.html:45 .\templates\outgo\create.html:14
+#: .\templates\outgo\edit.html:14 .\templates\outgo\read.html:20
+#: .\templates\sale\create.html:14 .\templates\sale\edit.html:14
+#: .\templates\sale\index.html:13 .\templates\sale\read.html:32
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\binding\edit.html:3 .\templates\binding\index.html:28
+#: .\templates\catalog\edit.html:3 .\templates\catalog\index.html:48
+#: .\templates\category\edit.html:3 .\templates\category\index.html:24
+#: .\templates\coming\edit.html:3 .\templates\coming\index.html:36
+#: .\templates\construction\edit.html:3 .\templates\construction\index.html:40
+#: .\templates\investments\edit.html:3 .\templates\investments\index.html:36
+#: .\templates\investor\edit.html:3 .\templates\investor\index.html:45
+#: .\templates\news\edit.html:3 .\templates\news\index.html:35
+#: .\templates\outgo\edit.html:3 .\templates\outgo\index.html:36
+#: .\templates\sale\edit.html:3 .\templates\sale\index.html:48
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\binding\index.html:15 .\templates\binding\index.html:38
+#: .\templates\catalog\index.html:26 .\templates\category\index.html:14
+#: .\templates\category\index.html:34 .\templates\coming\index.html:17
+#: .\templates\coming\index.html:46 .\templates\construction\index.html:18
+#: .\templates\construction\index.html:50
+#: .\templates\investments\index.html:17 .\templates\investments\index.html:46
+#: .\templates\investor\index.html:17 .\templates\news\index.html:15
+#: .\templates\outgo\index.html:17 .\templates\outgo\index.html:46
+#: .\templates\sale\index.html:26
+msgid "Add"
+msgstr "Добавить"
+
+#: .\templates\binding\index.html:29 .\templates\catalog\index.html:49
+#: .\templates\category\index.html:25 .\templates\coming\index.html:37
+#: .\templates\construction\index.html:41
+#: .\templates\investments\index.html:37 .\templates\investor\index.html:46
+#: .\templates\news\index.html:36 .\templates\outgo\index.html:37
+#: .\templates\sale\index.html:49
+msgid "View"
+msgstr "Просмотреть"
+
+#: .\templates\binding\index.html:30 .\templates\catalog\index.html:50
+#: .\templates\category\index.html:26 .\templates\coming\index.html:38
+#: .\templates\construction\index.html:42
+#: .\templates\investments\index.html:38 .\templates\investor\index.html:47
+#: .\templates\news\index.html:37 .\templates\outgo\index.html:38
+#: .\templates\sale\index.html:50
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\binding\read.html:3 .\templates\catalog\read.html:4
+#: .\templates\category\read.html:3 .\templates\coming\read.html:3
+#: .\templates\construction\read.html:3 .\templates\investments\read.html:3
+#: .\templates\investor\read.html:4 .\templates\news\read.html:4
+#: .\templates\outgo\read.html:3 .\templates\sale\read.html:4
+msgid "Read"
+msgstr "Просмотреть"
+
+#: .\templates\catalog\details.html:4 .\templates\catalog\list.html:42
+msgid "Catalog details"
+msgstr "Описание"
+
+#: .\templates\catalog\details.html:14
+msgid "Sale Quantity"
+msgstr "Продано"
+
+#: .\templates\catalog\details.html:17 .\templates\catalog\details.html:110
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: .\templates\catalog\details.html:21 .\templates\catalog\list.html:51
+msgid "Avg Rating"
+msgstr "Средний рейтинг"
+
+#: .\templates\catalog\details.html:29
+msgid "info"
+msgstr "Информация"
+
+#: .\templates\catalog\details.html:33 .\templates\catalog\read.html:16
+#: .\templates\sale\read.html:16
+msgid "details"
+msgstr "Описание"
+
+#: .\templates\catalog\details.html:37
+msgid "code"
+msgstr "Код"
+
+#: .\templates\catalog\details.html:116
+msgid "Saleday"
+msgstr "Дата продажи"
+
+#: .\templates\catalog\details.html:118
+msgid "Rating"
+msgstr "Оценка"
+
+#: .\templates\catalog\details.html:128
+msgid "No reviews yet"
+msgstr "Нет отзывов"
+
+#: .\templates\catalog\index.html:7
+msgid "Coming"
+msgstr "Приход"
+
+#: .\templates\catalog\index.html:22 .\templates\news\index.html:13
+#: .\templates\sale\index.html:22
+msgid "title"
+msgstr "Заголовок"
+
+#: .\templates\catalog\list.html:4 .\templates\catalog\list.html:7
+msgid "Catalog list"
+msgstr "Список товара"
+
+#: .\templates\catalog\list.html:10
+msgid "Basket"
+msgstr "Корзина"
+
+#: .\templates\catalog\list.html:56
+msgid "Add to basket"
+msgstr "Добавить в корзину"
+
+#: .\templates\catalog\list.html:66
+msgid "Code"
+msgstr "Код"
+
+#: .\templates\category\index.html:12
+msgid "Category_title"
+msgstr "Название категории"
+
+#: .\templates\coming\create.html:6 .\templates\coming\edit.html:6
+#: .\templates\coming\read.html:6
+msgid "coming"
+msgstr "Приход"
+
+#: .\templates\coming\index.html:15 .\templates\coming\index.html:33
+#: .\templates\outgo\index.html:15
+msgid "catalogs"
+msgstr "Каталог"
+
+#: .\templates\index.html:4
+msgid "App name"
+msgstr "Gaisa"
+
+#: .\templates\index.html:310
+msgid "all newss"
+msgstr "Все новости"
+
+#: .\templates\investments\create.html:6 .\templates\investments\edit.html:6
+#: .\templates\investments\read.html:6
+msgid "investments"
+msgstr "Инвестиции"
+
+#: .\templates\investor\create.html:6 .\templates\investor\edit.html:6
+#: .\templates\investor\read.html:7
+msgid "investor"
+msgstr "Инвестор"
+
+#: .\templates\investor\index.html:15
+msgid "link"
+msgstr "Ссылка"
+
+#: .\templates\outgo\create.html:6 .\templates\outgo\edit.html:6
+#: .\templates\outgo\read.html:6
+msgid "outgo"
+msgstr "Расход"
+
+#: .\templates\outgo\index.html:33
+msgid "sales"
+msgstr "Продажи"
+
+#: .\templates\outgo\read.html:14
+msgid "outgo_construction"
+msgstr "Объект строительства"
+
+#: .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Gaisa"
+
+#: .\templates\registration\logged_out.html:6
+msgid "Logged out!"
+msgstr "Вышли!"
+
+#: .\templates\registration\logged_out.html:7
+msgid "Login again"
+msgstr "Войти снова"
+
+#: .\templates\registration\login.html:7
+msgid "Incorrect login or password"
+msgstr "Неверный логин или пароль"
+
+#: .\templates\registration\login.html:12
+msgid "You dont have access"
+msgstr "У вас нет доступа"
+
+#: .\templates\registration\login.html:14
+msgid "Login to see this page"
+msgstr "Войдите, чтобы увидеть эту страницу"
+
+#: .\templates\registration\login.html:22
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: .\templates\registration\login.html:27
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: .\templates\registration\login.html:33
+msgid "Lost password?"
+msgstr "Забыли пароль?"
+
+#: .\templates\registration\login.html:34
+#: .\templates\registration\signup.html:15
+msgid "Create an account"
+msgstr "Завести аккаунт"
+
+#: .\templates\registration\my_account.html:15
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: .\templates\registration\password_change_done.html:5
+msgid "Password changed"
+msgstr "Пароль изменен"
+
+#: .\templates\registration\password_reset_complete.html:6
+msgid "Password reset completed!"
+msgstr "Сброс пароля завершен!"
+
+#: .\templates\registration\password_reset_complete.html:7
+msgid "Log in again?"
+msgstr "Войти снова?"
+
+#: .\templates\registration\password_reset_confirm.html:5
+#: .\templates\registration\password_reset_confirm.html:12
+msgid "Password reset confirmation"
+msgstr "Подтверждение сброса пароля"
+
+#: .\templates\registration\password_reset_confirm.html:18
+#: .\templates\registration\password_reset_form.html:10
+#: .\templates\registration\password_reset_form.html:16
+msgid "Reset password"
+msgstr "Сброс пароля"
+
+#: .\templates\registration\password_reset_confirm.html:26
+msgid "Please enter (and confirm) your new password."
+msgstr "Пожалуйста, введите (и подтвердите) новый пароль."
+
+#: .\templates\registration\password_reset_confirm.html:32
+msgid "New password:"
+msgstr "Новый пароль:"
+
+#: .\templates\registration\password_reset_confirm.html:37
+msgid "Confirm password:"
+msgstr "Подтвердите пароль:"
+
+#: .\templates\registration\password_reset_confirm.html:48
+msgid "Password reset failed"
+msgstr "Не удалось сбросить пароль"
+
+#: .\templates\registration\password_reset_confirm.html:49
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr "Ссылка для сброса пароля недействительна, возможно, из-за того, что "
+"использовано. Пожалуйста, запросите новый сброс пароля."
+
+#: .\templates\registration\password_reset_done.html:6
+msgid "Password reset"
+msgstr "Восстановление пароля"
+
+#: .\templates\registration\password_reset_done.html:7
+msgid "Check your email"
+msgstr "Проверьте свою электронную почту"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Asked password reset email"
+msgstr "Электронная почта для сброса пароля"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Follow the link below:"
+msgstr "Перейдите по ссылке ниже"
+
+#: .\templates\registration\register_done.html:10
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: .\templates\registration\register_done.html:11
+msgid "Your account has been successfully created."
+msgstr "Ваша учетная запись успешно создана."
+
+#: .\templates\registration\register_done.html:11
+#: .\templates\registration\signup.html:20
+msgid "Log in"
+msgstr "Авторизоваться"
+
+#: .\templates\registration\signup.html:20
+msgid "Already have an account?"
+msgstr "У вас уже есть аккаунт?"
+
+#: .\templates\sale\create.html:6 .\templates\sale\edit.html:6
+#: .\templates\sale\index.html:4 .\templates\sale\index.html:11
+msgid "sale"
+msgstr "Продажа"
+
+#: .\templates\sale\index.html:7
+msgid "Sale"
+msgstr "Продажа"

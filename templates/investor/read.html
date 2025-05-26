@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "investor" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h4>{{ investor.fio }}</h4>			
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-10">				
+					<p>{{ investor.phone }}</p>					
+					<p><a href="mailto:{{ investor.email }}">{{ investor.email }}</a></p>						
+				</div>
+				<div class="col-md-2">
+					{% if investor.photo.url == "/ media /images/investor1.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor1.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% elif investor.photo.url == "/ media /images/investor2.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor2.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% elif investor.photo.url == "/ media /images/investor3.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor3.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% elif investor.photo.url == "/ media /images/investor4.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor4.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% elif investor.photo.url == "/ media /images/investor5.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor5.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% elif investor.photo.url == "/ media /images/investor6.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor6.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% elif investor.photo.url == "/ media /images/investor7.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor7.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% elif investor.photo.url == "/ media /images/investor8.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor8.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% elif investor.photo.url == "/ media /images/investor9.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor9.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% elif investor.photo.url == "/ media /images/investor10.jpeg" %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/investor10.jpeg' %}" alt="{{ investor.title }}" title="{{ investor.details }}">    
+					{% else %}
+						{% if investor.photo.url != None %}
+							<img style="width:100%; max-width:400px;" src="{{ investor.photo.url}}" alt="{{ investor.title }}" title="{{ investor.details }}">
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>				
+		</div>
+		<div class="card-footer">
+			{% if investor.link != None %}		
+				<p><a href="{{ investor.link }}" target="_blank">{{ investor.link }}</a></p>			
+			{% endif %}
+		</div>		
+	</div>
+	<br>
+	<a class="btn btn-outline-info" style="width:100px; margin-top:5px" onclick="history.back()">{% trans "Back" %}</a> 
+</div>
+
+{% endblock content %}

@@ -1,0 +1,1 @@
+web: gunicorn gaisa.wsgi 
